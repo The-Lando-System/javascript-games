@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-4">
+  	<div class="row">
+  	  <h1>Play Number {{ playCount+1 }}</h1>
+  	</div>
+  	<div class="row" ng-hide="gameOver">
+  	  <h1>{{ whoseTurn }}'s Turn</h1>
+  	</div>
+  </div>
+  <div class="col-md-4">
+    <div ng-repeat="n in [1,2,3]">
+  	  <div class="tictactoe-box" ng-click="play(n)">
+    	<i ng-class="ticTacToeClass(n)" ng-show="isClicked(n)"></i>
+  	  </div>
+	</div>
+	<div class="tictactoe-clear"></div>
+	<div ng-repeat="n in [4,5,6]">
+  	  <div class="tictactoe-box" ng-click="play(n)">
+        <i ng-class="ticTacToeClass(n)" ng-show="isClicked(n)"></i>
+  	  </div>
+	</div>
+	<div class="tictactoe-clear"></div>
+	<div ng-repeat="n in [7,8,9]">
+  	  <div class="tictactoe-box" ng-click="play(n)">
+        <i ng-class="ticTacToeClass(n)" ng-show="isClicked(n)"></i>
+  	  </div>
+	</div>
+  </div>
+  <div class="col-md-4">
+  	<div class="row" ng-show="gameOver">
+  	  <h1>{{ winner }}</h1>
+  	</div>
+  	<div class="row" ng-show="gameOver">
+  	  <button class="btn btn-default" ng-click="resetGame()">Reset Game</button>
+  	</div>
+  </div>
+</div>

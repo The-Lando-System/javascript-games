@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>{{ hello }}</h1>
+  </div>
+  <nav class="navbar navbar-default">
+    <div class="container">
+  	  <ul class="nav navbar-nav">
+  	    <li>
+          <a class="navbar-brand" ui-sref="home" ng-click="changeBanner('JavaScript Games!')">Home</a>
+        </li>
+  	    <li ui-sref-active="active">
+          <a ui-sref=".tictactoe" ng-click="changeBanner('Tic-Tac-Toe')">Tic-Tac-Toe</a>
+        </li>
+  	  </ul>
+    </div>
+  </nav>
+  <div ui-view></div>
+</div>
